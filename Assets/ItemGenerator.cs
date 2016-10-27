@@ -60,6 +60,10 @@ public class ItemGenerator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //画面から消えたオブジェクトを削除
+        if (!GetComponent<Renderer>().isVisible){
+            Destroy(this.gameObject);
+        }
 	
 	}
 }
